@@ -1,7 +1,14 @@
-<h1>Formulario de creacion de empleado</h1>
+@extends('layouts.app')
 
-<form action="{{ url('/empleado') }}" method="post" enctype="multipart/form-data">
-@csrf
-@include('empleado.form', ['modo' => 'Crear'])
+@section('content')
+<div class="container">
 
-</form>
+    <h1>Formulario de creacion de empleado</h1>
+
+    <form action="{{ url('/empleado') }}" method="post" enctype="multipart/form-data">
+    @csrf
+    @include('empleado.form', ['modo' => 'Crear'])
+
+    </form>
+</div>
+@endsection
